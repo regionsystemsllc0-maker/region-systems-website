@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import {
     ArrowRight,
     Globe,
@@ -9,6 +10,22 @@ import {
     CheckCircle,
     Quote
 } from 'lucide-react'
+
+export const metadata: Metadata = {
+    title: 'Premium Website Design & Development',
+    description:
+        'Region Systems LLC designs and develops premium websites that build trust and drive conversions for businesses nationwide.',
+    alternates: {
+        canonical: '/',
+    },
+    openGraph: {
+        title: 'Region Systems LLC | Premium Website Design & Development',
+        description:
+            'Indiana-based website studio delivering premium websites engineered to convert.',
+        url: 'https://regionsystems.com',
+        type: 'website',
+    },
+}
 
 export default function Home() {
     const offerings = [
@@ -32,8 +49,22 @@ export default function Home() {
         },
     ]
 
+    const homePageJsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        name: 'Region Systems LLC',
+        url: 'https://regionsystems.com',
+        description:
+            'Premium website design and development services for businesses nationwide.',
+        inLanguage: 'en-US',
+    }
+
     return (
         <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(homePageJsonLd) }}
+            />
             <section className="relative min-h-screen flex items-center justify-center bg-hero-radial pt-20 overflow-hidden">
                 <div className="absolute inset-0 bg-grid-pattern opacity-20"></div>
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent via-navy-950/50 to-navy-950"></div>

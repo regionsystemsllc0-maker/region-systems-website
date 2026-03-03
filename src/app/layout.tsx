@@ -8,13 +8,35 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
     metadataBase: new URL('https://regionsystems.com'),
-    title: 'Region Systems LLC | Premium Website Design & Development',
+    title: {
+        default: 'Region Systems LLC | Premium Website Design & Development',
+        template: '%s | Region Systems LLC',
+    },
     description: 'Region Systems LLC builds premium websites for serious businesses, from focused landing pages to fully integrated digital platforms.',
     keywords: 'premium website design, website development agency, business website builder, indiana web design, nationwide website development',
     authors: [{ name: 'Region Systems LLC' }],
     creator: 'Region Systems LLC',
     publisher: 'Region Systems LLC',
-    robots: 'index, follow',
+    alternates: {
+        canonical: '/',
+    },
+    robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+            index: true,
+            follow: true,
+            'max-image-preview': 'large',
+            'max-snippet': -1,
+            'max-video-preview': -1,
+        },
+    },
+    other: {
+        'geo.region': 'US-IN',
+        'geo.placename': 'Indiana',
+        'geo.position': '39.7684;-86.1581',
+        ICBM: '39.7684, -86.1581',
+    },
     openGraph: {
         type: 'website',
         locale: 'en_US',
@@ -35,11 +57,47 @@ export default function RootLayout({
 }: {
     children: React.ReactNode
 }) {
+    const orgJsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'ProfessionalService',
+        name: 'Region Systems LLC',
+        url: 'https://regionsystems.com',
+        email: 'regionsystemsllc0@gmail.com',
+        telephone: '+1-219-510-3566',
+        areaServed: {
+            '@type': 'Country',
+            name: 'United States',
+        },
+        address: {
+            '@type': 'PostalAddress',
+            addressRegion: 'IN',
+            addressCountry: 'US',
+        },
+        sameAs: [],
+        description:
+            'Indiana-based website studio delivering premium websites for businesses nationwide, from focused landing pages to integrated platforms.',
+    }
+
+    const websiteJsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'WebSite',
+        name: 'Region Systems LLC',
+        url: 'https://regionsystems.com',
+        inLanguage: 'en-US',
+    }
+
     return (
         <html lang="en" className="scroll-smooth">
             <head>
                 <link rel="icon" href="/favicon.ico" />
-                <link rel="canonical" href="https://regionsystems.com" />
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
+                />
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+                />
             </head>
             <body className={`${inter.className} antialiased bg-navy-950 text-navy-100`}>
                 <Navigation />

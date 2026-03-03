@@ -17,6 +17,16 @@ export const metadata: Metadata = {
     title: 'Website Services | Region Systems LLC',
     description: 'Premium website services from focused landing pages to advanced, integration-ready digital platforms.',
     keywords: 'website services, premium web design, web development services, business website development, ecommerce web development',
+    alternates: {
+        canonical: '/services',
+    },
+    openGraph: {
+        title: 'Website Services | Region Systems LLC',
+        description:
+            'Explore landing pages, business websites, commerce builds, and integrated workflow solutions.',
+        url: 'https://regionsystems.com/services',
+        type: 'website',
+    },
 }
 
 export default function Services() {
@@ -121,8 +131,31 @@ export default function Services() {
         }
     ]
 
+    const servicesJsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: 'Website Development Services',
+        itemListElement: mainServices.map((service, index) => ({
+            '@type': 'Service',
+            position: index + 1,
+            name: service.title,
+            description: service.description,
+            provider: {
+                '@type': 'Organization',
+                name: 'Region Systems LLC',
+                url: 'https://regionsystems.com',
+            },
+            areaServed: 'US',
+            serviceType: 'Website Development',
+        })),
+    }
+
     return (
         <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesJsonLd) }}
+            />
             <section className="relative pt-32 pb-20 bg-gradient-to-br from-navy-950 via-navy-900 to-navy-950">
                 <div className="container-custom">
                     <div className="max-w-4xl mx-auto text-center">

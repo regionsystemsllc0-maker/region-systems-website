@@ -11,6 +11,16 @@ export const metadata: Metadata = {
     title: 'About Region Systems LLC',
     description: 'Region Systems LLC is an Indiana-based premium website studio serving businesses nationwide.',
     keywords: 'about region systems llc, premium web studio, indiana website agency, nationwide web services',
+    alternates: {
+        canonical: '/about',
+    },
+    openGraph: {
+        title: 'About Region Systems LLC',
+        description:
+            'Meet the Indiana-based website studio building premium web experiences for businesses nationwide.',
+        url: 'https://regionsystems.com/about',
+        type: 'website',
+    },
 }
 
 export default function About() {
@@ -63,8 +73,22 @@ export default function About() {
         }
     ]
 
+    const aboutPageJsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'AboutPage',
+        name: 'About Region Systems LLC',
+        url: 'https://regionsystems.com/about',
+        description:
+            'Region Systems LLC is an Indiana-based website studio focused on premium design and practical engineering.',
+        inLanguage: 'en-US',
+    }
+
     return (
         <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutPageJsonLd) }}
+            />
             <section className="relative pt-32 pb-20 bg-gradient-to-br from-navy-950 via-navy-900 to-navy-950">
                 <div className="container-custom">
                     <div className="max-w-4xl mx-auto text-center">

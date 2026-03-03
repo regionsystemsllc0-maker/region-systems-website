@@ -6,6 +6,16 @@ export const metadata: Metadata = {
     title: 'Get a Quote - Region Systems LLC',
     description: 'Request a premium website project quote from Region Systems LLC. Indiana-based, serving businesses nationwide.',
     keywords: 'get a website quote, premium web development quote, indiana web studio, nationwide website projects',
+    alternates: {
+        canonical: '/contact',
+    },
+    openGraph: {
+        title: 'Get a Quote | Region Systems LLC',
+        description:
+            'Start your website project quote with Region Systems LLC. Indiana-based, serving businesses nationwide.',
+        url: 'https://regionsystems.com/contact',
+        type: 'website',
+    },
 }
 
 export default function Contact() {
@@ -25,8 +35,49 @@ export default function Contact() {
         ].join('\n')
     )
 
+    const contactPageJsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'ContactPage',
+        name: 'Get a Quote',
+        url: 'https://regionsystems.com/contact',
+        description:
+            'Request a quote for website design and development services from Region Systems LLC.',
+        inLanguage: 'en-US',
+    }
+
+    const faqJsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+            {
+                '@type': 'Question',
+                name: 'What should I include in my quote email?',
+                acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'Include your business name, current website, the type of build you need, your goals, and any integration requirements.',
+                },
+            },
+            {
+                '@type': 'Question',
+                name: 'Do you work nationwide?',
+                acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'Yes. Region Systems LLC is based in Indiana and serves clients across the United States.',
+                },
+            },
+        ],
+    }
+
     return (
         <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(contactPageJsonLd) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+            />
             <section className="relative pt-32 pb-20 bg-gradient-to-br from-navy-950 via-navy-900 to-navy-950">
                 <div className="container-custom">
                     <div className="max-w-4xl mx-auto text-center">
