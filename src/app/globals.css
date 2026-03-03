@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-feature-settings: 'rlig' 1, 'calt' 1;
+        background: #020617;
+        color: #e2e8f0;
+    }
+}
+
+@layer components {
+    .btn-primary {
+        @apply bg-accent-600 hover:bg-accent-500 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-glow;
+    }
+
+    .btn-secondary {
+        @apply bg-navy-700 hover:bg-navy-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300;
+    }
+
+    .btn-outline {
+        @apply border border-accent-500/50 text-accent-200 hover:bg-accent-500/20 hover:text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300;
+    }
+
+    .container-custom {
+        @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+    }
+
+    .section-padding {
+        @apply py-16 sm:py-20 lg:py-24;
+    }
+
+    .gradient-text {
+        @apply bg-gradient-to-r from-accent-300 to-accent-500 bg-clip-text text-transparent;
+    }
+
+    .card-hover {
+        @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-glow;
+    }
+
+    .text-shadow {
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+}
+
+@layer utilities {
+    .animation-delay-200 {
+        animation-delay: 200ms;
+    }
+
+    .animation-delay-400 {
+        animation-delay: 400ms;
+    }
+
+    .animation-delay-600 {
+        animation-delay: 600ms;
+    }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #020617;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #334155;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #475569;
+}
+
+/* Focus styles for accessibility */
+.focus-visible:focus {
+    @apply outline-none ring-2 ring-accent-500 ring-offset-2;
+}
+
+/* Background grid pattern */
+.bg-grid-pattern {
+    background-image: radial-gradient(circle at 1px 1px, rgba(148, 163, 184, 0.2) 1px, transparent 0);
+    background-size: 20px 20px;
+}
+
+/* Smooth scrolling for all browsers */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Print styles */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+
+    body {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+}
