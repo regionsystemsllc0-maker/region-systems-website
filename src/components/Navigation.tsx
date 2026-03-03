@@ -2,8 +2,9 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
-import { Menu, X, Globe } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 
 const Navigation = () => {
     const [isOpen, setIsOpen] = useState(false)
@@ -42,8 +43,15 @@ const Navigation = () => {
                         className="flex items-center space-x-3 group"
                         onClick={() => setIsOpen(false)}
                     >
-                        <div className="p-2 bg-accent-600 rounded-lg group-hover:bg-accent-500 transition-colors duration-300">
-                            <Globe className="h-6 w-6 text-white" />
+                        <div className="h-10 w-10 rounded-lg overflow-hidden border border-accent-400/30 group-hover:border-accent-300/60 transition-colors duration-300">
+                            <Image
+                                src="/region-systems-logo.png"
+                                alt="Region Systems LLC logo mark"
+                                width={1024}
+                                height={1024}
+                                className="h-full w-full object-cover object-top"
+                                priority
+                            />
                         </div>
                         <div className="hidden sm:block">
                             <span className="text-xl font-bold text-white">
