@@ -89,7 +89,7 @@ export default function About() {
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutPageJsonLd) }}
             />
-            <section className="relative pt-32 pb-20 bg-gradient-to-br from-navy-950 via-navy-900 to-navy-950">
+            <section className="relative pt-32 pb-20 bg-gradient-to-br from-navy-950 via-navy-900 to-navy-950" data-reveal>
                 <div className="container-custom">
                     <div className="max-w-4xl mx-auto text-center">
                         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
@@ -117,7 +117,7 @@ export default function About() {
                 </div>
             </section>
 
-            <section className="section-padding bg-navy-950">
+            <section className="section-padding bg-navy-950" data-reveal>
                 <div className="container-custom">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                         <div>
@@ -160,7 +160,7 @@ export default function About() {
                 </div>
             </section>
 
-            <section className="section-padding bg-navy-900">
+            <section className="section-padding bg-navy-900" data-reveal>
                 <div className="container-custom">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
@@ -173,7 +173,7 @@ export default function About() {
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {principles.map((item) => (
-                            <div key={item.title} className="bg-navy-950 rounded-xl p-8 shadow-lg card-hover border border-navy-800">
+                            <div key={item.title} className="bg-navy-950 rounded-xl p-8 shadow-lg card-hover border border-navy-800" data-reveal data-delay="70">
                                 <h3 className="text-xl font-semibold text-white mb-4">{item.title}</h3>
                                 <p className="text-navy-300 leading-relaxed">{item.description}</p>
                             </div>
@@ -182,7 +182,7 @@ export default function About() {
                 </div>
             </section>
 
-            <section className="section-padding bg-navy-950">
+            <section className="section-padding bg-navy-950" data-reveal>
                 <div className="container-custom">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
@@ -195,7 +195,7 @@ export default function About() {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                         {process.map((item) => (
-                            <div key={item.step} className="bg-navy-900 rounded-xl p-6 border border-navy-800">
+                            <div key={item.step} className="bg-navy-900 rounded-xl p-6 border border-navy-800" data-reveal data-delay="90">
                                 <div className="text-accent-300 font-semibold mb-2">{item.step}</div>
                                 <h3 className="text-white text-lg font-semibold">{item.title}</h3>
                                 <p className="text-navy-300 text-sm mt-2">
@@ -207,7 +207,7 @@ export default function About() {
                 </div>
             </section>
 
-            <section className="section-padding bg-navy-900">
+            <section className="section-padding bg-navy-900" data-reveal>
                 <div className="container-custom">
                     <div className="max-w-4xl mx-auto bg-navy-950 rounded-2xl border border-navy-800 p-10 text-center">
                         <div className="inline-flex items-center space-x-2 text-accent-300 mb-4">

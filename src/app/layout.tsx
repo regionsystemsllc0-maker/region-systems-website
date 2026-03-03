@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
+import MotionEffects from '@/components/MotionEffects'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -100,6 +101,7 @@ export default function RootLayout({
                 />
             </head>
             <body className={`${inter.className} antialiased bg-navy-950 text-navy-100`}>
+                <MotionEffects />
                 <Navigation />
                 <main className="min-h-screen">
                     {children}

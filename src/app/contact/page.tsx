@@ -78,7 +78,7 @@ export default function Contact() {
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
             />
-            <section className="relative pt-32 pb-20 bg-gradient-to-br from-navy-950 via-navy-900 to-navy-950">
+            <section className="relative pt-32 pb-20 bg-gradient-to-br from-navy-950 via-navy-900 to-navy-950" data-reveal>
                 <div className="container-custom">
                     <div className="max-w-4xl mx-auto text-center">
                         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
@@ -105,9 +105,9 @@ export default function Contact() {
                 </div>
             </section>
 
-            <section className="section-padding bg-navy-950">
+            <section className="section-padding bg-navy-950" data-reveal>
                 <div className="container-custom">
-                    <div className="max-w-3xl mx-auto bg-navy-900 rounded-2xl border border-navy-800 p-8 sm:p-10">
+                    <div className="max-w-3xl mx-auto bg-navy-900 rounded-2xl border border-navy-800 p-8 sm:p-10" data-reveal data-delay="60">
                         <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">Start your quote by email</h2>
                         <p className="text-navy-300 mb-8 leading-relaxed">
                             Send your project details directly to Connor for a clear scope and next-step reply.

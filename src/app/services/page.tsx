@@ -156,9 +156,9 @@ export default function Services() {
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesJsonLd) }}
             />
-            <section className="relative pt-32 pb-20 bg-gradient-to-br from-navy-950 via-navy-900 to-navy-950">
+            <section className="relative pt-32 pb-20 bg-gradient-to-br from-navy-950 via-navy-900 to-navy-950" data-reveal>
                 <div className="container-custom">
-                    <div className="max-w-4xl mx-auto text-center">
+                    <div className="max-w-4xl mx-auto text-center" data-reveal data-delay="50">
                         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
                             Website Building <span className="gradient-text">Services</span>
                         </h1>
@@ -183,7 +183,7 @@ export default function Services() {
                 </div>
             </section>
 
-            <section id="services" className="section-padding bg-navy-950">
+            <section id="services" className="section-padding bg-navy-950" data-reveal>
                 <div className="container-custom">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
@@ -201,6 +201,8 @@ export default function Services() {
                                 id={service.id}
                                 className={`grid grid-cols-1 lg:grid-cols-2 gap-16 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''
                                     }`}
+                                data-reveal
+                                data-delay={index * 70}
                             >
                                 <div className={index % 2 === 1 ? 'lg:col-start-2' : ''}>
                                     <div className="flex items-center space-x-4 mb-6">
@@ -284,7 +286,7 @@ export default function Services() {
                 </div>
             </section>
 
-            <section className="section-padding bg-navy-900">
+            <section className="section-padding bg-navy-900" data-reveal>
                 <div className="container-custom">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
@@ -297,7 +299,7 @@ export default function Services() {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                         {capabilities.map((service) => (
-                            <div key={service.title} className="bg-navy-950 rounded-xl p-6 shadow-lg card-hover border border-navy-800">
+                            <div key={service.title} className="bg-navy-950 rounded-xl p-6 shadow-lg card-hover border border-navy-800" data-reveal data-delay="60">
                                 <div className="p-3 bg-accent-500/15 rounded-lg w-fit mb-4">
                                     <service.icon className="h-6 w-6 text-accent-300" />
                                 </div>
@@ -313,7 +315,7 @@ export default function Services() {
                 </div>
             </section>
 
-            <section className="section-padding bg-navy-900 text-white">
+            <section className="section-padding bg-navy-900 text-white" data-reveal>
                 <div className="container-custom">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl sm:text-4xl font-bold mb-6">
@@ -348,7 +350,7 @@ export default function Services() {
                 </div>
             </section>
 
-            <section className="section-padding bg-gradient-to-br from-navy-900 to-navy-950 text-white">
+            <section className="section-padding bg-gradient-to-br from-navy-900 to-navy-950 text-white" data-reveal>
                 <div className="container-custom">
                     <div className="text-center max-w-4xl mx-auto">
                         <h2 className="text-3xl sm:text-4xl font-bold mb-6">

@@ -40,7 +40,7 @@ const Navigation = () => {
                 <div className="flex items-center justify-between h-16 lg:h-20">
                     <Link
                         href="/"
-                        className="flex items-center space-x-3 group"
+                        className="flex items-center space-x-3 group motion-safe:hover:-translate-y-0.5 transition-transform duration-300"
                         onClick={() => setIsOpen(false)}
                     >
                         <div className="h-10 w-10 rounded-lg overflow-hidden border border-accent-400/30 group-hover:border-accent-300/60 transition-colors duration-300">
@@ -68,7 +68,7 @@ const Navigation = () => {
                             <Link
                                 key={link.href}
                                 href={link.href}
-                                className={`text-sm font-medium transition-colors duration-300 hover:text-accent-300 ${pathname === link.href
+                                className={`text-sm font-medium transition-all duration-300 hover:text-accent-300 hover:-translate-y-0.5 ${pathname === link.href
                                         ? 'text-accent-300'
                                         : 'text-navy-200'
                                     }`}
@@ -95,8 +95,8 @@ const Navigation = () => {
 
                 <div
                     className={`lg:hidden transition-all duration-300 ease-in-out ${isOpen
-                            ? 'max-h-96 opacity-100'
-                            : 'max-h-0 opacity-0 overflow-hidden'
+                            ? 'max-h-96 opacity-100 translate-y-0'
+                            : 'max-h-0 opacity-0 overflow-hidden -translate-y-2'
                         }`}
                 >
                     <div className="py-4 space-y-2 bg-navy-900 rounded-lg shadow-lg mt-2 border border-navy-800">

@@ -68,28 +68,30 @@ export default function Home() {
             <section className="relative min-h-screen flex items-center justify-center bg-hero-radial pt-20 overflow-hidden">
                 <div className="absolute inset-0 bg-grid-pattern opacity-20"></div>
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent via-navy-950/50 to-navy-950"></div>
+                <div className="ambient-orb h-40 w-40 bg-accent-500 top-24 left-[8%]"></div>
+                <div className="ambient-orb h-56 w-56 bg-cyan-400 bottom-20 right-[10%]"></div>
 
                 <div className="container-custom relative z-10">
                     <div className="text-center max-w-4xl mx-auto">
-                        <div className="animate-fade-in">
-                            <div className="inline-flex items-center space-x-2 bg-accent-500/20 border border-accent-400/30 text-accent-200 px-4 py-2 rounded-full text-sm font-medium mb-8">
+                        <div className="animate-fade-in" data-reveal data-delay="50">
+                            <div className="inline-flex items-center space-x-2 bg-accent-500/20 border border-accent-400/30 text-accent-200 px-4 py-2 rounded-full text-sm font-medium mb-8" data-reveal data-delay="100">
                                 <Globe className="h-4 w-4" />
                                 <span>Indiana-Based, Nationwide Website Studio</span>
                             </div>
 
-                            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+                            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight" data-reveal data-delay="140">
                                 Premium Websites
                                 <span className="gradient-text block">
                                     Engineered to Convert
                                 </span>
                             </h1>
 
-                            <p className="text-xl text-navy-200 mb-10 leading-relaxed max-w-3xl mx-auto">
+                            <p className="text-xl text-navy-200 mb-10 leading-relaxed max-w-3xl mx-auto" data-reveal data-delay="180">
                                 Indiana-based. Nationwide delivery.
                                 We build websites that command trust and drive action.
                             </p>
 
-                            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                            <div className="flex flex-col sm:flex-row gap-4 justify-center" data-reveal data-delay="230">
                                 <Link
                                     href="/contact"
                                     className="btn-primary text-lg inline-flex items-center space-x-2 group"
@@ -109,18 +111,18 @@ export default function Home() {
                 </div>
             </section>
 
-            <section className="py-14 bg-navy-950 border-y border-navy-800">
+            <section className="py-14 bg-navy-950 border-y border-navy-800" data-reveal>
                 <div className="container-custom">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                        <div className="animate-fade-in">
+                        <div className="animate-fade-in" data-reveal data-delay="0">
                             <div className="text-3xl font-bold text-white mb-2">Nationwide from Indiana</div>
                             <div className="text-navy-300">Serving businesses across the U.S. from our Indiana base.</div>
                         </div>
-                        <div className="animate-fade-in animation-delay-200">
+                        <div className="animate-fade-in animation-delay-200" data-reveal data-delay="80">
                             <div className="text-3xl font-bold text-white mb-2">Modern</div>
                             <div className="text-navy-300">Clean, premium visual direction</div>
                         </div>
-                        <div className="animate-fade-in animation-delay-400">
+                        <div className="animate-fade-in animation-delay-400" data-reveal data-delay="160">
                             <div className="text-3xl font-bold text-white mb-2">Fast</div>
                             <div className="text-navy-300">Fast turnaround with clear process</div>
                         </div>
@@ -128,9 +130,9 @@ export default function Home() {
                 </div>
             </section>
 
-            <section className="section-padding bg-navy-900">
+            <section className="section-padding bg-navy-900" data-reveal>
                 <div className="container-custom">
-                    <div className="text-center mb-16">
+                    <div className="text-center mb-16" data-reveal data-delay="40">
                         <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
                             Website Solutions for Every Growth Stage
                         </h2>
@@ -141,7 +143,7 @@ export default function Home() {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {offerings.map((item) => (
-                            <div key={item.title} className="bg-navy-950 rounded-xl p-8 shadow-lg card-hover border border-navy-800">
+                            <div key={item.title} className="bg-navy-950 rounded-xl p-8 shadow-lg card-hover border border-navy-800" data-reveal data-delay="80">
                                 <div className="p-3 bg-accent-500/15 rounded-lg w-fit mb-6">
                                     <item.icon className="h-8 w-8 text-accent-300" />
                                 </div>
@@ -157,7 +159,7 @@ export default function Home() {
                 </div>
             </section>
 
-            <section className="section-padding bg-navy-950">
+            <section className="section-padding bg-navy-950" data-reveal>
                 <div className="container-custom">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                         <div>
@@ -224,7 +226,7 @@ export default function Home() {
                 </div>
             </section>
 
-            <section className="section-padding bg-navy-900">
+            <section className="section-padding bg-navy-900" data-reveal>
                 <div className="container-custom">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
@@ -251,7 +253,7 @@ export default function Home() {
                 </div>
             </section>
 
-            <section className="section-padding bg-gradient-to-br from-navy-900 to-navy-950 text-white relative overflow-hidden">
+            <section className="section-padding bg-gradient-to-br from-navy-900 to-navy-950 text-white relative overflow-hidden" data-reveal>
                 <div className="absolute inset-0 bg-grid-pattern opacity-20"></div>
                 <div className="container-custom relative z-10">
                     <div className="text-center max-w-4xl mx-auto">
