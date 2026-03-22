@@ -63,7 +63,7 @@ export default function RootLayout({
         '@type': 'ProfessionalService',
         name: 'Region Systems LLC',
         url: 'https://regionsystems.com',
-        email: 'regionsystemsllc0@gmail.com',
+        email: 'havlinconnor@gmail.com',
         telephone: '+1-219-510-3566',
         areaServed: {
             '@type': 'Country',

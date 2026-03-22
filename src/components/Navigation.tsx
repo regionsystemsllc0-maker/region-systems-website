@@ -14,6 +14,7 @@ const Navigation = () => {
     const navLinks = [
         { href: '/', label: 'Home' },
         { href: '/services', label: 'Services' },
+        { href: '/pricing', label: 'Pricing' },
         { href: '/about', label: 'About' },
         { href: '/contact', label: 'Get a Quote' },
     ]
@@ -35,6 +36,7 @@ const Navigation = () => {
                     ? 'bg-navy-950/95 backdrop-blur-sm border-b border-navy-800'
                     : 'bg-transparent border-b border-transparent'
                 }`}
+            aria-label="Main navigation"
         >
             <div className="container-custom">
                 <div className="flex items-center justify-between h-16 lg:h-20">
@@ -87,7 +89,8 @@ const Navigation = () => {
                     <button
                         onClick={toggleMenu}
                         className="lg:hidden p-2 rounded-lg text-navy-200 hover:text-white hover:bg-navy-800 transition-colors duration-300"
-                        aria-label="Toggle menu"
+                        aria-label={isOpen ? 'Close menu' : 'Open menu'}
+                        aria-expanded={isOpen}
                     >
                         {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
                     </button>
@@ -130,4 +133,3 @@ const Navigation = () => {
 }
 
 export default Navigation
-

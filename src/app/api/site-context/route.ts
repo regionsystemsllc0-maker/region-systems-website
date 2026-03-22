@@ -5,7 +5,7 @@ export async function GET() {
         company: {
             name: 'Region Systems LLC',
             website: 'https://regionsystems.com',
-            email: 'regionsystemsllc0@gmail.com',
+            email: 'havlinconnor@gmail.com',
             phone: '+1-219-510-3566',
             location: 'Indiana, United States',
             serviceArea: 'Nationwide (US)',

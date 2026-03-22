@@ -114,7 +114,7 @@ export default function Contact() {
                         </p>
 
                         <a
-                            href={`mailto:regionsystemsllc0@gmail.com?subject=${quoteSubject}&body=${quoteBody}`}
+                            href={`mailto:havlinconnor@gmail.com?subject=${quoteSubject}&body=${quoteBody}`}
                             className="btn-primary w-full sm:w-auto inline-flex items-center justify-center gap-2 py-4 px-8"
                         >
                             <Mail className="h-5 w-5" />
@@ -136,8 +136,8 @@ export default function Contact() {
                         <div className="mt-8 space-y-4">
                             <div className="flex items-start gap-3 text-navy-300">
                                 <Mail className="h-5 w-5 mt-0.5 text-accent-300" />
-                                <a href="mailto:regionsystemsllc0@gmail.com" className="hover:text-accent-300 transition-colors duration-300">
-                                    regionsystemsllc0@gmail.com
+                                <a href="mailto:havlinconnor@gmail.com" className="hover:text-accent-300 transition-colors duration-300">
+                                    havlinconnor@gmail.com
                                 </a>
                             </div>
                             <div className="flex items-start gap-3 text-navy-300">
