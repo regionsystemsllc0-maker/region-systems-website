@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://regionsystems.com/sitemap.xml
+Sitemap: https://regionsystemsllc.com/sitemap.xml
 
 # Disallow admin areas (if any)
 Disallow: /admin/
@@ -11,6 +11,8 @@ Disallow: /admin/
 Allow: /
 Allow: /about
 Allow: /services
+Allow: /pricing
+Allow: /care-plans
 Allow: /contact
 
 # AI crawlers (GEO readiness)
@@ -28,4 +30,3 @@ Allow: /
 
 User-agent: Google-Extended
 Allow: /
-

@@ -2,29 +2,33 @@ import Link from 'next/link'
 import {
     Rocket,
     Layers,
-    ShoppingCart,
     Workflow,
-    Link2,
-    Code2,
-    LayoutDashboard,
+    Shield,
     CheckCircle,
     ArrowRight,
-    Gauge
+    Wrench,
+    Scale,
+    Stethoscope,
+    Car,
+    UtensilsCrossed,
+    Dumbbell,
+    Scissors,
+    Home,
+    Building2
 } from 'lucide-react'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-    title: 'Website Services | Region Systems LLC',
-    description: 'Premium website services from focused landing pages to advanced, integration-ready digital platforms.',
-    keywords: 'website services, premium web design, web development services, business website development, ecommerce web development',
+    title: 'Web Design Services & Pricing | Region Systems LLC',
+    description: 'Custom website services: Landing Pages from $2,500, Business Websites from $4,000, Care Plans from $150/mo, Integrated Platforms from $6,500+.',
+    keywords: 'website services, web design pricing, custom web development, business website, landing page design',
     alternates: {
         canonical: '/services',
     },
     openGraph: {
-        title: 'Website Services | Region Systems LLC',
-        description:
-            'Explore landing pages, business websites, commerce builds, and integrated workflow solutions.',
-        url: 'https://regionsystems.com/services',
+        title: 'Web Design Services & Pricing | Region Systems LLC',
+        description: 'From landing pages to integrated platforms \u2014 scoped and priced clearly.',
+        url: 'https://regionsystemsllc.com/services',
         type: 'website',
     },
 }
@@ -35,100 +39,95 @@ export default function Services() {
             id: 'landing-pages',
             icon: Rocket,
             title: 'Landing Pages',
-            subtitle: 'Lean launches built to convert',
-            description: 'High-impact landing pages with clear messaging and action.',
+            subtitle: 'Starting at $2,500',
+            description: 'Single-page builds for lead generation, campaign traffic, or product launches.',
             features: [
-                'Messaging-first page architecture',
-                'Mobile-first responsive design',
-                'SEO-ready page structure',
-                'Conversion-focused CTA design'
+                'Conversion-first layout: headline \u2192 social proof \u2192 CTA \u2192 trust signals',
+                'Mobile-first. Sub-3-second load time guaranteed.',
+                'SEO-ready page structure with schema markup',
+                'Ideal for: contractors, service businesses, campaign-specific offers',
             ],
         },
         {
             id: 'business-websites',
             icon: Layers,
             title: 'Business Websites',
-            subtitle: 'Complete websites for trust and growth',
-            description: 'Multi-page websites aligned to your positioning and growth goals.',
+            subtitle: 'Starting at $4,000',
+            description: 'Multi-page builds for businesses that need to own their market position.',
             features: [
-                'Custom design system implementation',
-                'Service and proof page layouts',
-                'Performance-minded front-end build',
-                'Scalable content structure'
+                'Custom design system \u2014 no templates, no Wix, no shortcuts',
+                'Optimized for Google rankings, trust, and inbound leads',
+                'Service pages, about, contact, and proof architecture',
+                'Ideal for: law firms, medical practices, home services, real estate, local businesses',
+            ],
+            highlighted: true,
+        },
+        {
+            id: 'care-plans',
+            icon: Shield,
+            title: 'Care Plans',
+            subtitle: '$150\u2013$200/month',
+            description: 'Monthly maintenance so your site never breaks, slows down, or goes stale.',
+            features: [
+                'Content updates, uptime monitoring, security checks, backups',
+                'Analytics reports and quarterly performance optimization',
+                'Priority email support with same-day response',
+                'Most clients treat it like insurance for their most important online asset',
             ],
         },
         {
-            id: 'commerce-platforms',
-            icon: ShoppingCart,
-            title: 'Commerce Platforms',
-            subtitle: 'Online stores built for conversion',
-            description: 'Modern storefronts with conversion-first discovery and checkout flow.',
-            features: [
-                'Catalog and category architecture',
-                'Checkout and conversion optimization',
-                'Order and fulfillment integrations',
-                'Conversion analytics setup'
-            ],
-        },
-        {
-            id: 'integrated-workflows',
+            id: 'integrated-platforms',
             icon: Workflow,
-            title: 'Integrated Workflows',
-            subtitle: 'Websites connected to your business operations',
-            description: 'Advanced websites connected to CRMs, tools, and routing systems.',
+            title: 'Integrated Platforms',
+            subtitle: 'Starting at $6,500+',
+            description: 'Complex builds connected to your CRM, scheduling tools, booking systems, and workflows.',
             features: [
-                'CRM and API integrations',
-                'Form and lead routing logic',
-                'Workflow-enabled page interactions',
-                'Operational dashboard handoff'
+                'API integrations, form routing logic, automation triggers',
+                'Connected to your existing business systems from day one',
+                'Custom dashboards and operational handoff',
+                'Ideal for: multi-location businesses, high-volume lead operations, custom workflows',
             ],
-        }
+        },
     ]
 
-    const capabilities = [
-        {
-            icon: Link2,
-            title: 'Third-Party Integrations',
-            description: 'Connect your site to the software stack your team already runs on.'
-        },
-        {
-            icon: Code2,
-            title: 'Custom Components',
-            description: 'Purpose-built interface systems designed around your operation and customer journey.'
-        },
-        {
-            icon: LayoutDashboard,
-            title: 'Content Management',
-            description: 'Structured content architecture so your team can update pages confidently.'
-        },
-        {
-            icon: Gauge,
-            title: 'Performance Optimization',
-            description: 'Practical speed and UX tuning that keeps your site fast and premium.'
-        }
+    const industries = [
+        { icon: Wrench, label: 'Contractors (HVAC, plumbing, roofing, landscaping)' },
+        { icon: Scale, label: 'Law firms & legal practices' },
+        { icon: Stethoscope, label: 'Medical, dental & chiropractic offices' },
+        { icon: Car, label: 'Auto repair & body shops' },
+        { icon: UtensilsCrossed, label: 'Restaurants & catering businesses' },
+        { icon: Dumbbell, label: 'Fitness studios & gyms' },
+        { icon: Scissors, label: 'Salons & spas' },
+        { icon: Home, label: 'Real estate agents' },
+        { icon: Building2, label: 'Any local service business that lives or dies by Google' },
     ]
 
     const processSteps = [
         {
             step: '01',
-            title: 'Scope',
-            description: 'Goals, user paths, and scope.'
+            title: 'Discovery & Scope',
+            description: 'We learn your business, your customers, and your goals. You get a clear proposal within 48 hours.',
         },
         {
             step: '02',
-            title: 'Design',
-            description: 'Sharp visual direction and messaging.'
+            title: 'Design Direction',
+            description: 'Custom visual direction built around your brand. No templates. You see mockups before a line of code is written.',
         },
         {
             step: '03',
             title: 'Build',
-            description: 'Clean code, responsive layouts, integrations.'
+            description: 'Clean, hand-written code. HTML, CSS, JavaScript, React, or Next.js depending on what the project needs.',
         },
         {
             step: '04',
-            title: 'Launch',
-            description: 'QA, launch, and clear handoff.'
-        }
+            title: 'QA & Launch',
+            description: 'Lighthouse audit \u226590 across all metrics. Mobile QA. Cross-browser check. Then we launch.',
+        },
+        {
+            step: '05',
+            title: 'Handoff & Growth',
+            description: 'You get full ownership. Optionally, we stay on via Care Plan to keep the site fast, updated, and performing.',
+        },
     ]
 
     const servicesJsonLd = {
@@ -143,7 +142,7 @@ export default function Services() {
             provider: {
                 '@type': 'Organization',
                 name: 'Region Systems LLC',
-                url: 'https://regionsystems.com',
+                url: 'https://regionsystemsllc.com',
             },
             areaServed: 'US',
             serviceType: 'Website Development',
@@ -156,128 +155,82 @@ export default function Services() {
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesJsonLd) }}
             />
+
+            {/* Hero */}
             <section className="relative pt-32 pb-20 bg-gradient-to-br from-navy-950 via-navy-900 to-navy-950" data-reveal>
                 <div className="container-custom">
                     <div className="max-w-4xl mx-auto text-center" data-reveal data-delay="50">
                         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
-                            Website Building <span className="gradient-text">Services</span>
+                            Web Design <span className="gradient-text">Services</span>
                         </h1>
                         <p className="text-xl text-navy-300 leading-relaxed mb-8">
-                            From focused pages to integrated platforms.
+                            From focused landing pages to integrated platforms &mdash; scoped and priced clearly.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <Link
-                                href="/contact"
-                                className="btn-primary text-lg inline-flex items-center space-x-2"
-                            >
+                            <Link href="/contact" className="btn-primary text-lg inline-flex items-center space-x-2">
                                 <span>Get a Quote Now</span>
                             </Link>
-                            <Link
-                                href="#services"
-                                className="btn-outline text-lg"
-                            >
-                                Explore Services
+                            <Link href="/pricing" className="btn-outline text-lg">
+                                View Pricing
                             </Link>
                         </div>
                     </div>
                 </div>
             </section>
 
+            {/* Services */}
             <section id="services" className="section-padding bg-navy-950" data-reveal>
                 <div className="container-custom">
                     <div className="text-center mb-16">
-                        <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-                            Our Core Services
-                        </h2>
+                        <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">Our Core Services</h2>
                         <p className="text-xl text-navy-300 max-w-3xl mx-auto">
                             Built for every stage of growth, from launch to scale.
                         </p>
                     </div>
 
-                    <div className="space-y-16">
-                        {mainServices.map((service, index) => (
+                    <div className="space-y-12">
+                        {mainServices.map((service) => (
                             <div
                                 key={service.id}
                                 id={service.id}
-                                className={`grid grid-cols-1 lg:grid-cols-2 gap-16 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''
-                                    }`}
+                                className={`bg-navy-900 rounded-2xl p-8 sm:p-10 border ${service.highlighted ? 'border-accent-500/40' : 'border-navy-800'}`}
                                 data-reveal
-                                data-delay={index * 70}
+                                data-delay="60"
                             >
-                                <div className={index % 2 === 1 ? 'lg:col-start-2' : ''}>
-                                    <div className="flex items-center space-x-4 mb-6">
-                                        <div className="p-3 bg-accent-500/15 rounded-lg">
-                                            <service.icon className="h-8 w-8 text-accent-300" />
+                                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                                    <div className="lg:col-span-2">
+                                        <div className="flex items-center gap-4 mb-4">
+                                            <div className="p-3 bg-accent-500/15 rounded-lg">
+                                                <service.icon className="h-7 w-7 text-accent-300" />
+                                            </div>
+                                            <div>
+                                                <h3 className="text-2xl font-bold text-white">{service.title}</h3>
+                                                <p className="text-accent-300 font-medium text-sm">{service.subtitle}</p>
+                                            </div>
+                                            {service.highlighted && (
+                                                <span className="hidden sm:inline-block bg-accent-600 text-white text-xs font-bold px-3 py-1 rounded-full">
+                                                    Most Popular
+                                                </span>
+                                            )}
                                         </div>
-                                        <div>
-                                            <h3 className="text-2xl sm:text-3xl font-bold text-white">
-                                                {service.title}
-                                            </h3>
-                                            <p className="text-accent-300 font-medium">
-                                                {service.subtitle}
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <p className="text-lg text-navy-300 leading-relaxed mb-8">
-                                        {service.description}
-                                    </p>
-
-                                    <div>
-                                        <h4 className="font-semibold text-white mb-4">Included</h4>
+                                        <p className="text-lg text-navy-300 leading-relaxed mb-6">{service.description}</p>
                                         <ul className="space-y-2">
-                                            {service.features.map((feature, featureIndex) => (
-                                                <li key={featureIndex} className="flex items-center space-x-2">
-                                                    <CheckCircle className="h-4 w-4 text-accent-300 flex-shrink-0" />
+                                            {service.features.map((feature) => (
+                                                <li key={feature} className="flex items-start gap-2">
+                                                    <CheckCircle className="h-4 w-4 text-accent-400 mt-0.5 flex-shrink-0" />
                                                     <span className="text-sm text-navy-300">{feature}</span>
                                                 </li>
                                             ))}
                                         </ul>
                                     </div>
-
-                                    <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+                                    <div className="flex items-end">
                                         <Link
                                             href="/contact"
-                                            className="btn-primary inline-flex items-center space-x-2"
+                                            className="btn-primary inline-flex items-center gap-2 w-full justify-center lg:w-auto"
                                         >
-                                            <span>Get a Quote Now</span>
+                                            <span>Get a Quote</span>
                                             <ArrowRight className="h-4 w-4" />
                                         </Link>
-                                        <div className="text-sm text-navy-400">
-                                            Fast turnaround • Strategically scoped execution
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className={index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}>
-                                    <div className="bg-gradient-to-br from-accent-600/35 to-navy-900 rounded-2xl p-8 text-white border border-accent-400/20">
-                                        <div className="space-y-6">
-                                            <div className="flex items-center space-x-3">
-                                                <service.icon className="h-12 w-12 text-accent-300" />
-                                                <div>
-                                                    <h4 className="text-xl font-bold">{service.title}</h4>
-                                                    <p className="text-accent-100">Premium execution with practical outcomes</p>
-                                                </div>
-                                            </div>
-
-                                            <div className="bg-white/10 rounded-lg p-4">
-                                                <h5 className="font-semibold mb-3">Execution Focus</h5>
-                                                <div className="space-y-2">
-                                                    <div className="flex justify-between">
-                                                        <span className="text-accent-100">Design quality</span>
-                                                        <span className="font-semibold">High</span>
-                                                    </div>
-                                                    <div className="flex justify-between">
-                                                        <span className="text-accent-100">Technical depth</span>
-                                                        <span className="font-semibold">Scalable</span>
-                                                    </div>
-                                                    <div className="flex justify-between">
-                                                        <span className="text-accent-100">Delivery speed</span>
-                                                        <span className="font-semibold">Fast</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -286,99 +239,68 @@ export default function Services() {
                 </div>
             </section>
 
+            {/* Industries */}
             <section className="section-padding bg-navy-900" data-reveal>
                 <div className="container-custom">
                     <div className="text-center mb-16">
-                        <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-                            Execution Capabilities
-                        </h2>
-                        <p className="text-xl text-navy-300 max-w-3xl mx-auto">
-                            Beyond visuals. Built for operations.
-                        </p>
+                        <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">Industries We Build For</h2>
                     </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                        {capabilities.map((service) => (
-                            <div key={service.title} className="bg-navy-950 rounded-xl p-6 shadow-lg card-hover border border-navy-800" data-reveal data-delay="60">
-                                <div className="p-3 bg-accent-500/15 rounded-lg w-fit mb-4">
-                                    <service.icon className="h-6 w-6 text-accent-300" />
-                                </div>
-                                <h3 className="text-lg font-semibold text-white mb-3">
-                                    {service.title}
-                                </h3>
-                                <p className="text-navy-300 text-sm leading-relaxed">
-                                    {service.description}
-                                </p>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
+                        {industries.map((industry) => (
+                            <div key={industry.label} className="flex items-center gap-3 bg-navy-950 rounded-xl p-4 border border-navy-800" data-reveal data-delay="30">
+                                <industry.icon className="h-5 w-5 text-accent-300 flex-shrink-0" />
+                                <span className="text-sm text-navy-200">{industry.label}</span>
                             </div>
                         ))}
                     </div>
+                    <p className="text-center text-navy-400 text-sm mt-8 max-w-2xl mx-auto">
+                        These are the industries where a quality website has a direct, measurable ROI &mdash; because customers are actively searching and your competitors are already showing up.
+                    </p>
                 </div>
             </section>
 
-            <section className="section-padding bg-navy-900 text-white" data-reveal>
+            {/* Process */}
+            <section className="section-padding bg-navy-950" data-reveal>
                 <div className="container-custom">
                     <div className="text-center mb-16">
-                        <h2 className="text-3xl sm:text-4xl font-bold mb-6">
-                            Our Process
-                        </h2>
-                        <p className="text-xl text-navy-200 max-w-3xl mx-auto">
-                            A disciplined process from kickoff to launch.
+                        <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">Our Process</h2>
+                        <p className="text-xl text-navy-300 max-w-3xl mx-auto">
+                            Five clear stages from kickoff to launch.
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {processSteps.map((step, index) => (
-                            <div key={index} className="relative">
-                                <div className="bg-navy-800 rounded-xl p-6 border border-navy-700 h-full">
-                                    <div className="flex items-center space-x-4 mb-4">
-                                        <div className="w-12 h-12 bg-accent-600 rounded-full flex items-center justify-center font-bold text-lg">
-                                            {step.step}
-                                        </div>
-                                        <h3 className="text-xl font-semibold">{step.title}</h3>
-                                    </div>
-                                    <p className="text-navy-200 leading-relaxed">
-                                        {step.description}
-                                    </p>
+                    <div className="max-w-3xl mx-auto space-y-4">
+                        {processSteps.map((s) => (
+                            <div key={s.step} className="flex gap-6 bg-navy-900 rounded-xl p-6 border border-navy-800" data-reveal data-delay="50">
+                                <div className="w-12 h-12 bg-accent-600 rounded-full flex items-center justify-center font-bold text-lg text-white flex-shrink-0">
+                                    {s.step}
                                 </div>
-
-                                {index < processSteps.length - 1 && (
-                                    <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-0.5 bg-accent-600 z-10"></div>
-                                )}
+                                <div>
+                                    <h3 className="text-lg font-semibold text-white mb-1">{s.title}</h3>
+                                    <p className="text-navy-300 text-sm leading-relaxed">{s.description}</p>
+                                </div>
                             </div>
                         ))}
                     </div>
                 </div>
             </section>
 
+            {/* CTA */}
             <section className="section-padding bg-gradient-to-br from-navy-900 to-navy-950 text-white" data-reveal>
                 <div className="container-custom">
                     <div className="text-center max-w-4xl mx-auto">
-                        <h2 className="text-3xl sm:text-4xl font-bold mb-6">
-                            Ready to Start?
-                        </h2>
+                        <h2 className="text-3xl sm:text-4xl font-bold mb-6">Ready to Start?</h2>
                         <p className="text-xl text-navy-200 mb-10 leading-relaxed">
-                            We will scope the right service level and execute quickly.
+                            We&apos;ll scope the right service level and deliver fast. Proposals within 48 hours.
                         </p>
-
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-                            <Link
-                                href="/contact"
-                                className="btn-primary py-4 px-8 inline-flex items-center space-x-2"
-                            >
+                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                            <Link href="/contact" className="btn-primary py-4 px-8 inline-flex items-center space-x-2">
                                 <span>Get a Quote Now</span>
+                                <ArrowRight className="h-5 w-5" />
                             </Link>
-                            <Link
-                                href="/about"
-                                className="btn-outline py-4 px-8"
-                            >
-                                Learn About Us
+                            <Link href="/pricing" className="btn-outline py-4 px-8">
+                                View Pricing
                             </Link>
-                        </div>
-
-                        <div className="text-center text-navy-300">
-                            <p className="text-sm">
-                                Nationwide service • Indiana based • Fast turnaround
-                            </p>
                         </div>
                     </div>
                 </div>
@@ -386,4 +308,3 @@ export default function Services() {
         </>
     )
 }
-

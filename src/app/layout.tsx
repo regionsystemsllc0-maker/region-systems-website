@@ -4,11 +4,13 @@ import './globals.css'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import MotionEffects from '@/components/MotionEffects'
+import GoogleAnalytics from '@/components/GoogleAnalytics'
+import ScrollCTA from '@/components/ScrollCTA'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-    metadataBase: new URL('https://regionsystems.com'),
+    metadataBase: new URL('https://regionsystemsllc.com'),
     title: {
         default: 'Region Systems LLC | Premium Website Design & Development',
         template: '%s | Region Systems LLC',
@@ -41,7 +43,7 @@ export const metadata: Metadata = {
     openGraph: {
         type: 'website',
         locale: 'en_US',
-        url: 'https://regionsystems.com',
+        url: 'https://regionsystemsllc.com',
         title: 'Region Systems LLC | Premium Website Design & Development',
         description: 'Indiana-based website studio delivering premium websites for businesses nationwide.',
         siteName: 'Region Systems LLC',
@@ -62,7 +64,7 @@ export default function RootLayout({
         '@context': 'https://schema.org',
         '@type': 'ProfessionalService',
         name: 'Region Systems LLC',
-        url: 'https://regionsystems.com',
+        url: 'https://regionsystemsllc.com',
         email: 'havlinconnor@gmail.com',
         telephone: '+1-219-510-3566',
         areaServed: {
@@ -83,7 +85,7 @@ export default function RootLayout({
         '@context': 'https://schema.org',
         '@type': 'WebSite',
         name: 'Region Systems LLC',
-        url: 'https://regionsystems.com',
+        url: 'https://regionsystemsllc.com',
         inLanguage: 'en-US',
     }
 
@@ -101,12 +103,14 @@ export default function RootLayout({
                 />
             </head>
             <body className={`${inter.className} antialiased bg-navy-950 text-navy-100`}>
+                <GoogleAnalytics />
                 <MotionEffects />
                 <Navigation />
                 <main className="min-h-screen">
                     {children}
                 </main>
                 <Footer />
+                <ScrollCTA />
             </body>
         </html>
     )
